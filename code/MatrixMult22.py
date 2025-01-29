@@ -81,7 +81,7 @@ ctrls=[		# Globally available editable controls.
 0,			# 6 - print multiplication set, 0 full, 1 one-line summary.
 1,			# 7 - flag for print options, -1, none, 0 summary, 1 standard, 2 detailed, 3 diagnostic.
 1,			# 8 - write run outcomes to log file.
-0,			# 9 - turn off matplotlib plots.
+1,			# 9 - turn off matplotlib plots.
 0,			# 10 - used for plotting variable.
 0,			# 11 - used for plotting variable.
 6000,		# 12 - plus transition frequency, 0 never.
