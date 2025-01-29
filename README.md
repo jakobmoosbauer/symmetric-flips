@@ -6,7 +6,7 @@ This repository contains accompanying code and data for the publication:
 
 The included program is free software: you can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the Free
-Software Foundation, either version 3 of the License, or (at yor option) any
+Software Foundation, either version 3 of the License, or (at your option) any
 later version.
 
 The included program is distributed in the hope that it will be useful, but
