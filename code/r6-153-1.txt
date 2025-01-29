@@ -1,0 +1,57 @@
+# r6-153-1.txt - run case file for MatrixMult21.py.
+
+# General options - size of problem, random seed, number of solves and output options.
+
+MATRIX_SIZE: 6 # Integer value >=2, <=8, required.
+RANDOM_SEED: AUTO # AUTO or integer value up to 10 digits, required.
+NUMBER_OF_SOLVES: 1000 # Integer value >0, required.
+PRINT_OUTPUT: STANDARD # NONE or SUMMARY or STANDARD or DETAILED or DIAGNOSTIC, required.
+SCHEME_STYLE: FULL # FULL or SUMMARY, required.
+WRITE_LOG: YES # YES (writes to runlog.txt) or NO, required.
+
+# Definition - if a NEW run, specify either DIAGONAL_CUBES or FULL_CUBES or neither.  
+# These are used to specify the degenerate cube (A=B=C) multiplications.  DIAGONAL_CUBES just
+# include the diagonal A11*B11*C11, A22*B22*C22 etc. terms and the set must include all
+# the diagonal terms. FULL_CUBES includes all terms including e.g.
+# A12*B12*C12, but such off-diagonal terms must cancel out in the set as a whole.
+# If neither FULL_CUBES or DIAGONAL_CUBES is specified, the individual diagonal cubes will
+# be triplicated to avoid the degeneracy - this will not work with 6-way symmetry for odd matrix size.
+# If a CONTINUATION run, specify either SAVED_FILE (specified file name in the results folder) or 
+# SAVED_SIZE (if a value is given, a random saved file of that size is chosen, 
+# if RANDOM is specified, a random file is chosen from the results folder). 
+# To SAVE - specify either ALL, which will overwrite the start point if no improvement
+# or save a new file if an improvement.  Or give an integer value, and a scheme will be saved if 
+# less than or equal to this value. All schemes are saved in a subfolder, results.
+
+RUN_TYPE: NEW # NEW or CONTINUATION, required.
+TARGET: 153 # Integer value, required.
+SAVE: 153 # ALL or integer value, required.
+SYMMETRY: 6 # Integer value 3 or 6, required.
+DIAGONAL_CUBES: 110000 001100 000011 # List of binary values of length MATRIX_SIZE, optional.
+# FULL_CUBES: <list of binary values> # List of binary values of length MATRIX_SIZE**2, optional.
+# SAVED_FILE: <filename> # File name (string), optional. 
+# SAVED_SIZE: <value> # RANDOM or integer value, optional. 
+
+# Flip limit - maximum number of flips allowed, if TERMINATION_STRATEGY is set to LIMIT, it will terminate on 
+# reaching the flip limit, if set to EARLY, it will terminate if there is deemed small chance of 
+# getting the flips needed to reach the target, if set to RESET, every new lowest rank,
+# the limit is changed to the current flips plus the flip limit.  
+
+FLIP_LIMIT: 1000000000 # Integer value >0, required.
+TERMINATION_STRATEGY: RESET # LIMIT, EARLY or RESET, required.
+
+# Plus transitions - specify the number of flips after which a plus transition will be made,
+# the limit is the maximum rank allowed, which can be above the start rank which can be useful if 
+# restarting from a saved solution. A limit of zero is taken to be the start rank. Plus transitions
+# are equally spaced unless specified to be random.
+
+PLUS_TRANSITION_AFTER: 500000 # Integer value, 0 means no plus transitions, required.
+PLUS_TRANSITION_LIMIT: 216 # Integer value, required.
+PLUS_TRANSITION_RANDOM: NO # YES or NO, required.
+
+# Maximum size - it is possible to limit the size of the multiplications in the set, 
+# to either a limit on the length of non-zero A, B or C, or a limit on the 'cuboid volume' A*B*C.
+
+MAXIMUM_SIZE: NONE # NONE or LENGTH and integer value >0 or VOLUME and integer value >0, required.
+
+
