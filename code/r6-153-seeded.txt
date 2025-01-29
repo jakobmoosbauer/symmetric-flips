@@ -1,9 +1,9 @@
-# r6-153-1.txt - run case file for MatrixMult22.py.
+# r6-153-seeded.txt - run case file for MatrixMult22.py.
 
 # General options - size of problem, random seed, number of solves and output options.
 
 MATRIX_SIZE: 6 # Integer value >=2, <=8, required.
-RANDOM_SEED: AUTO # AUTO or integer value up to 10 digits, required.
+RANDOM_SEED: 3500288084 # AUTO or integer value up to 10 digits, required.
 NUMBER_OF_SOLVES: 1000 # Integer value >0, required.
 PRINT_OUTPUT: STANDARD # NONE or SUMMARY or STANDARD or DETAILED or DIAGNOSTIC, required.
 SCHEME_STYLE: FULL # FULL or SUMMARY, required.

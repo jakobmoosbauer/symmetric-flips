@@ -1,10 +1,10 @@
-# r6-153-1.txt - run case file for MatrixMult22.py.
+# r5-93-seeded.txt - run case file for MatrixMult22.py.
 
 # General options - size of problem, random seed, number of solves and output options.
 
-MATRIX_SIZE: 6 # Integer value >=2, <=8, required.
-RANDOM_SEED: AUTO # AUTO or integer value up to 10 digits, required.
-NUMBER_OF_SOLVES: 1000 # Integer value >0, required.
+MATRIX_SIZE: 5 # Integer value >=2, <=8, required.
+RANDOM_SEED: 3161794629 # AUTO or integer value up to 10 digits, required.
+NUMBER_OF_SOLVES: 100 # Integer value >0, required.
 PRINT_OUTPUT: STANDARD # NONE or SUMMARY or STANDARD or DETAILED or DIAGNOSTIC, required.
 SCHEME_STYLE: FULL # FULL or SUMMARY, required.
 WRITE_LOG: YES # YES (writes to runlog.txt) or NO, required.
@@ -24,10 +24,10 @@ WRITE_LOG: YES # YES (writes to runlog.txt) or NO, required.
 # less than or equal to this value. All schemes are saved in a subfolder, results.
 
 RUN_TYPE: NEW # NEW or CONTINUATION, required.
-TARGET: 153 # Integer value, required.
-SAVE: 153 # ALL or integer value, required.
-SYMMETRY: 6 # Integer value 3 or 6, required.
-DIAGONAL_CUBES: 110000 001100 000011 # List of binary values of length MATRIX_SIZE, optional.
+TARGET: 93 # Integer value, required.
+SAVE: 93 # ALL or integer value, required.
+SYMMETRY: 3 # Integer value 3 or 6, required.
+DIAGONAL_CUBES: 10001 01010 00100 # List of binary values of length MATRIX_SIZE, optional.
 # FULL_CUBES: <list of binary values> # List of binary values of length MATRIX_SIZE**2, optional.
 # SAVED_FILE: <filename> # File name (string), optional. 
 # SAVED_SIZE: <value> # RANDOM or integer value, optional. 
@@ -37,7 +37,7 @@ DIAGONAL_CUBES: 110000 001100 000011 # List of binary values of length MATRIX_SI
 # getting the flips needed to reach the target, if set to RESET, every new lowest rank,
 # the limit is changed to the current flips plus the flip limit.  
 
-FLIP_LIMIT: 1000000000 # Integer value >0, required.
+FLIP_LIMIT: 100000000 # Integer value >0, required.
 TERMINATION_STRATEGY: RESET # LIMIT, EARLY or RESET, required.
 
 # Plus transitions - specify the number of flips after which a plus transition will be made,
@@ -45,8 +45,8 @@ TERMINATION_STRATEGY: RESET # LIMIT, EARLY or RESET, required.
 # restarting from a saved solution. A limit of zero is taken to be the start rank. Plus transitions
 # are equally spaced unless specified to be random.
 
-PLUS_TRANSITION_AFTER: 500000 # Integer value, 0 means no plus transitions, required.
-PLUS_TRANSITION_LIMIT: 216 # Integer value, required.
+PLUS_TRANSITION_AFTER: 50000 # Integer value, 0 means no plus transitions, required.
+PLUS_TRANSITION_LIMIT: 0 # Integer value, required.
 PLUS_TRANSITION_RANDOM: NO # YES or NO, required.
 
 # Maximum size - it is possible to limit the size of the multiplications in the set, 
