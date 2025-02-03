@@ -21,4 +21,4 @@ The file r5-93-1.txt details the case to be run, this one will try 100 runs to f
 The file r6-153-1.txt is an example input file for the 6x6 case. This case finds
 the target rank in about 1 in 1500 attempts.
 
-We also provide to input files with seeds that allow to find the target rank after 11(5x5) and 17(6x6) runs.
+We also provide to input files with seeds that allow to find the target rank after 11(5x5) and 17(6x6) runs. The random number generation depends on the python version, these seeds where used with Python 3.10.12.
