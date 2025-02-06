@@ -37,8 +37,8 @@ DIAGONAL_CUBES: 10001 01010 00100 # List of binary values of length MATRIX_SIZE,
 # getting the flips needed to reach the target, if set to RESET, every new lowest rank,
 # the limit is changed to the current flips plus the flip limit.  
 
-FLIP_LIMIT: 300000000 # Integer value >0, required.
-TERMINATION_STRATEGY: LIMIT # LIMIT, EARLY or RESET, required.
+FLIP_LIMIT: 100000000 # Integer value >0, required.
+TERMINATION_STRATEGY: RESET # LIMIT, EARLY or RESET, required.
 
 # Plus transitions - specify the number of flips after which a plus transition will be made,
 # the limit is the maximum rank allowed, which can be above the start rank which can be useful if 
