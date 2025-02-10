@@ -1,6 +1,6 @@
 # Flip Graphs with Symmetry and new Matrix Multiplication Schemes
 
-This repository contains accompanying code and data for the publication: 
+This repository contains accompanying code and data for the publication: https://arxiv.org/abs/2502.04514
 
 # License
 
